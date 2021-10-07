@@ -1,7 +1,7 @@
 <div role="main" class="container">
   <div class="jumbotron">
     <div class="container-fluid">
-      <div style=""><h5>Administración de productos</h5></div>
+      <div ><h5>{{ titulo }}</h5></div>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -13,15 +13,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <div *ngFor="let producto of productos; let i=index" >
+          <tr  *ngFor="let producto of productos; let i=index" >
+
               <th scope="row">{{ i+1 }}</th>
               <td>{{ producto.codigo }}</td>
               <td>{{ producto.descripcion }}</td>
               <td>{{ producto.precio }}</td>
             <td><button class="btn btn-danger" (click)="borrarProducto()">Borrar</button></td>
             <td><button class="btn btn-primary">Selecionar</button></td>
-          </div>
           </tr>
         </tbody>
       </table>
@@ -30,7 +29,7 @@
       <form>
         <div class="form-group">
           <label for="code" class="form-label">Código</label>
-          <input  class="form-control" type="number" name="code" id="" placeholder="Código del producto">
+          <input  class="form-control" type="number" name="code" id="" placeholder="Código del producto" >
         </div>
         <div class="form-group">
           <label for="description" class="form-label">Descripción</label>
