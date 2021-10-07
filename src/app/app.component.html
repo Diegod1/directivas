@@ -2,7 +2,7 @@
   <div class="jumbotron">
     <div class="container-fluid">
       <div style=""><h5>Administración de productos</h5></div>
-      <table class="table table-stripedd">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">Codigo</th>
@@ -14,11 +14,14 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td><button class="btn btn-danger">Borrar</button></td>
+            <div *ngFor="let producto of productos; let i=index" >
+              <th scope="row">{{ i+1 }}</th>
+              <td>{{ producto.codigo }}</td>
+              <td>{{ producto.descripcion }}</td>
+              <td>{{ producto.precio }}</td>
+            <td><button class="btn btn-danger" (click)="borrarProducto()">Borrar</button></td>
             <td><button class="btn btn-primary">Selecionar</button></td>
+          </div>
           </tr>
         </tbody>
       </table>
@@ -36,6 +39,9 @@
         <div class="form-group">
           <label for="price" class="form-label">Precio</label>
           <input  class="form-control" type="number" name="price" id="" placeholder="Precio del producto">
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-primary" (click)="agregarProducto()">Agregar producto</button>
         </div>
       </form>
   </div>
