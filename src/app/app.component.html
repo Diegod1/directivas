@@ -1,11 +1,11 @@
-<main role="main" class="container">
+<div role="main" class="container">
   <div class="jumbotron">
     <div class="container-fluid">
       <div style=""><h1>Administración de productos</h1></div>
-      <table class="table table-striped">
+      <table class="table table-stripedd">
         <caption>Productos</caption>
         <thead>
-          <tr class="bg-primary">
+          <tr>
             <th scope="col">Codigo</th>
             <th scope="col">Descripción</th>
             <th scope="col">Precio</th>
@@ -18,42 +18,28 @@
             <th scope="row">1</th>
             <td>Mark</td>
             <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>@mdo</td>
+            <td><button class="btn btn-danger">Borrar</button></td>
+            <td><button class="btn btn-primary">Selecionar</button></td>
           </tr>
         </tbody>
       </table>
 
-      <div class="mb-3">
-        <!-- <label for="code" class="form-label">Código</label> -->
-        <input type="number" name="code" id="" placeholder="Código">
-      </div>
-      <div class="mb-3">
-        <!-- <label for="description" class="form-label">Descripción</label> -->
-        <input type="text" name="description" id="" placeholder="Descripción">
-      </div>
-      <div class="mb-3">
-        <!-- <label for="price" class="form-label">Precio</label> -->
-        <input type="number" name="price" id="" placeholder="Precio">
-      </div>
-
-      </div>
+      <form>
+        <div class="form-group">
+          <label for="code" class="form-label">Código</label>
+          <input  class="form-control" type="number" name="code" id="" placeholder="Código del producto">
+        </div>
+        <div class="form-group">
+          <label for="description" class="form-label">Descripción</label>
+          <input class="form-control" type="text" name="description" id="" placeholder="Descripción del producto">
+        </div>
+        <div class="form-group">
+          <label for="price" class="form-label">Precio</label>
+          <input  class="form-control" type="number" name="price" id="" placeholder="Precio del producto">
+        </div>
+      </form>
   </div>
-</main>
+</div>
 
 
 
