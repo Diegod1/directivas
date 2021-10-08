@@ -29,15 +29,15 @@
       <form>
         <div class="form-group">
           <label for="code" class="form-label">Código</label>
-          <input  class="form-control" type="number" name="code" id="" placeholder="Código del producto" >
+          <input  class="form-control" type="text" name="code" id="" placeholder="Código del producto" [(ngModel)="codigoInput"]>
         </div>
         <div class="form-group">
           <label for="description" class="form-label">Descripción</label>
-          <input class="form-control" type="text" name="description" id="" placeholder="Descripción del producto">
+          <input class="form-control" type="text" name="description" id="" placeholder="Descripción del producto" [(ngModel)="descripcionInput">
         </div>
         <div class="form-group">
           <label for="price" class="form-label">Precio</label>
-          <input  class="form-control" type="number" name="price" id="" placeholder="Precio del producto">
+          <input  class="form-control" type="number" name="price" id="" placeholder="Precio del producto" [(ngModel)="precioInput">
         </div>
         <br>
         <div class="form-group">

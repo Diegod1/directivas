@@ -8,5 +8,5 @@ export class Producto{
   }
   */
 
-  constructor(public codigo: string, public descripcion: string, public precio:string){}
+  constructor(public codigo: string, public descripcion: string, public precio:number){}
 }
