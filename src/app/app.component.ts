@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Articulo } from './articulo.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -19,10 +20,20 @@ export class AppComponent {
     const resultado=this.articulos.find(esta => esta.codigo===this.codigo);
 
     if(resultado===undefined){
+      Swal.fire(
+        'Exito!',
+        'Articulo agregado',
+        'success'
+      )
       this.articulos.push(new Articulo(this.codigo,this.des,this.precio));
     }
     else{
-      alert("Ese codigo ya existe...")
+      //alert("Ese codigo ya existe...")
+      Swal.fire(
+        'Error!',
+        'Ese codigo ya existe',
+        'error'
+      )
     }
 
   }
@@ -46,7 +57,11 @@ export class AppComponent {
     const resultado=this.articulos.find(esta => esta.codigo===this.codigo);
 
     if(resultado===undefined){
-      alert("No existe..")
+      Swal.fire(
+        'Error!',
+        'El codigo ha modificar no existe',
+        'error'
+      )
     }
     else{
       resultado.codigo=this.codigo;
