@@ -1,4 +1,50 @@
 <div class="container">
-  <h1>Administracion de articulos</h1>
+  <h2>Administracion de articulos</h2>
+  <table class="tabla">
+    <tbody>
+      <tr>
+          <td>Codigo</td>
+          <td>Descripcion</td>
+          <td>Precio</td>
+          <td>Borrar</td>
+          <td>Seleccionar</td>
+      </tr>
+
+      <tr *ngFor="let a of articulos; let i=index">
+        <td>{{a.codigo}}</td>
+        <td>{{a.descripcion}}</td>
+        <td>{{a.precio}}</td>
+        <td><button class="btn btn-danger" (click)="borrarArticulo(i)">Borrar</button></td>
+        <td><button class="btn btn-success" (click)="seleccArticulo(i)">Seleccionar</button></td>
+      </tr>
+
+    </tbody>
+
+
+
+  </table>
+
+
+  <form action="">
+    <div class="col-md-2">
+      <label for="codigo">Código:</label>
+      <input type="number" name="codigo" id="codigo" [(ngModel)]="codigo">
+
+      <label for="des">Descripción</label>
+      <input type="text" name="des" id="des" [(ngModel)]="des">
+
+      <label for="precio">Precio:</label>
+      <input type="number" name="precio" id="precio" [(ngModel)]="precio">
+
+
+
+
+
+      <button type="submit"(click)="agregarArticulo()">Agregar</button>
+
+      <button class="botones" (click)="modificar()">Modificar</button>
+
+    </div>
+  </form>
 
 </div>
